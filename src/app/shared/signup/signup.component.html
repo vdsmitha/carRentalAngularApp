@@ -1,0 +1,99 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header" style="text-align: center;"> <h3>Sign Up </h3></div>
+        <div class="card-body">
+             <form (ngSubmit)='onSubmit(signupForm.value)' #signupForm="ngForm">
+                 <div class="form-group row">
+                     <label for="fname" class="col-lg-3 col-form-label">First Name:</label>
+                     <div class="col-lg-9"><input type="text" name="fname" [(ngModel)]="fname" class="form-control" required #firstname="ngModel">
+                     <div *ngIf="firstname.invalid && (firstname.dirty || firstname.touched)" class="text-danger">
+                         <div *ngIf="firstname.errors.required">
+                             First Name is required.
+                         </div>
+                        
+     
+                     </div>
+                     </div>
+                 </div>
+
+                 <div class="form-group row">
+                    <label for="lname" class="col-lg-3 col-form-label">Last Name:</label>
+                    <div class="col-lg-9"><input type="text" name="lname" [(ngModel)]="lname" class="form-control" required #lastname="ngModel">
+                   
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="email" class="col-lg-3 col-form-label">Email ID:</label>
+                    <div class="col-lg-9"><input type="email" name="email" [(ngModel)]="email" class="form-control" required #emailid="ngModel"
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                    <div *ngIf="emailid.invalid && (emailid.dirty || emailid.touched)" class="text-danger">
+                        <div *ngIf="emailid.errors.required">
+                            Email id is required.
+                        </div>
+                        <div *ngIf="emailid.errors.pattern">
+                            Enter a valid email address
+                        </div>
+    
+                    </div>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="mobile" class="col-lg-3 col-form-label">Mobile Number:</label>
+                    <div class="col-lg-9"><input type="text" name="mobile" [(ngModel)]="mobile" class="form-control" required 
+                        #mobileNum="ngModel" pattern=[1-9][0-9]{9}>
+                    <div *ngIf="mobileNum.invalid && (mobileNum.dirty || mobileNum.touched)" class="text-danger">
+                        <div *ngIf="mobileNum.errors.required">
+                            Mobile Number is required.
+                        </div>
+                        <div *ngIf="mobileNum.errors.pattern">
+                            Mobile number must have 10 digits only and cannot start with 0.
+                        </div>
+    
+                    </div>
+                    </div>
+                </div>
+
+
+ 
+                 <div class="form-group row">
+                 <label for="password" class="col-lg-3 col-form-label">Password:</label>
+                 <div class="col-lg-9"><input type="password" name="password" [(ngModel)]="password" class="form-control" required 
+                    #passwd="ngModel" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,}">
+                 <div *ngIf="passwd.invalid && (passwd.dirty || passwd.touched)" class="text-danger">
+                     <div *ngIf="passwd.errors.required">
+                         Password is required.
+                     </div>
+                     <div *ngIf="passwd.errors.pattern">
+                        Password should have minimum 5 characters, at least 1 uppercase letter, 1 lowercase letter and 1 number.
+                     </div>
+ 
+                 </div>
+                </div>
+             </div>
+             <div class="form-group row">
+                <label for="conpassword" class="col-lg-3 col-form-label"> Confirm Password:</label>
+                <div class="col-lg-9"><input type="password" name="conpassword" [(ngModel)]="conpassword" class="form-control" required #confirmpasswd="ngModel">
+                <div *ngIf="confirmpasswd.invalid && (confirmpasswd.dirty || confirmpasswd.touched)" class="text-danger">
+                    <div *ngIf="confirmpasswd.errors.required">
+                        Confirm Password is required.
+                    </div>
+
+                </div>
+            </div>
+            </div>
+             <br>
+             <div class="form-group row">
+                 <div class="col-md-3"></div>
+                <div class="col-md-6"><input type="submit" class="btn btn-primary" value="Sign In" [disabled]="!signupForm.valid" style="width: 100%;"></div>
+                <div class="col-md-3"></div>
+             </div>
+                       
+                 
+             </form>
+         </div>
+         </div>
+       
+ </div>
+ 

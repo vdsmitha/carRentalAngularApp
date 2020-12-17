@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+label{
+    font-weight: bold;
+    float: left;
+}
+
+
+.card{
+   
+    margin-top:30px;
+}

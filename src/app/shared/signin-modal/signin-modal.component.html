@@ -7,10 +7,10 @@
 
 
 <body>
-<button type="button" class="btn btn-primary" (click)="showModal()">Render auto-shown modal</button>
-<div *ngIf="isModalShown" [config]="{ show: true }" (onHidden)="onHidden()" bsModal #autoShownModal="bs-modal"
+<button type="button" class="btn btn-primary" (click)="openFirstModal(templatefirst)">Render auto-shown modal</button>
+<!-- <div *ngIf="isModalShown" [config]="{ show: true }" (onHidden)="onHidden()" bsModal #autoShownModal="bs-modal"
      class="modal fade" tabindex="-1" role="dialog" aria-labelledby="dialog-auto-name">
-  <div class="modal-dialog modal-slg">
+  <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header" >
         
@@ -27,18 +27,67 @@
             </tab>
             <tab id="tab2">
             <ng-template tabHeading><i class="fa fa-user-plus"></i> &nbsp;Sign up</ng-template>
+            <app-signup></app-signup>
         </tab>
           </tabset>
        
       </div>
-      <a href=# id="forgot">Forgot Password</a><br>
+      <button type="button" class="btn btn-link" >Forgot Password</button><br>
       <p id="signup">Don't have an account? <a href="#">Sign Up</a></p>
     </div>
   </div>
 </div>
 <div>
    
+  </div> -->
+   
+<ng-template #templatefirst>
+  <div class="modal-header">
+  
+   
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
   </div>
+  <div class="modal-body">
+    <tabset>
+      <tab id="tab1">
+          <ng-template tabHeading><i class="fa fa-sign-in"></i> &nbsp;Sign in</ng-template>
+          <app-signin></app-signin>
+          <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6" style="text-align: center;"><button type="button" class="btn btn-link" (click)="openModalSecond(templateSecond)">Forgot Password</button></div>
+            <div class="col-md-3"></div>
+          </div>
+          <div>
+            <p style="text-align: center;">Don't have an account? <a href="#">Sign Up</a></p>
+          </div>
+          
+      </tab>
+      <tab id="tab2">
+      <ng-template tabHeading><i class="fa fa-user-plus"></i> &nbsp;Sign up</ng-template>
+      <app-signup></app-signup>
+  </tab>
+    </tabset>
+     <br/>
+    
+  </div>
+</ng-template>
+
+<ng-template #templateSecond>
+  <div class="modal-header">
+    
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef2.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <app-reset-password></app-reset-password>
+    
+
+     <div class="clearfix"></div>
+  </div>
+</ng-template>
 </body>
 
   </html>

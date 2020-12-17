@@ -9,7 +9,7 @@ import { NgForm } from '@angular/forms';
 export class SigninComponent implements OnInit {
 
   constructor() { }
-username:string
+email:string
 password:string
   ngOnInit(): void {
   }
