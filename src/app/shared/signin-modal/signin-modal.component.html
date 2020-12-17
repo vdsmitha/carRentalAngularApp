@@ -1,50 +1,16 @@
 <html>
     <head>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
     </head>
-
-
-
 
 <body>
 <button type="button" class="btn btn-primary" (click)="openFirstModal(templatefirst)">Render auto-shown modal</button>
-<!-- <div *ngIf="isModalShown" [config]="{ show: true }" (onHidden)="onHidden()" bsModal #autoShownModal="bs-modal"
-     class="modal fade" tabindex="-1" role="dialog" aria-labelledby="dialog-auto-name">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header" >
-        
-        <button type="button" class="close pull-right" aria-label="Close" (click)="hideModal()">
-          <span aria-hidden="true">&times;</span>
-        </button>
-     
-      </div>
-      <div class="modal-body">
-        <tabset>
-            <tab id="tab1">
-                <ng-template tabHeading><i class="fa fa-sign-in"></i> &nbsp;Sign in</ng-template>
-                <app-signin></app-signin>
-            </tab>
-            <tab id="tab2">
-            <ng-template tabHeading><i class="fa fa-user-plus"></i> &nbsp;Sign up</ng-template>
-            <app-signup></app-signup>
-        </tab>
-          </tabset>
-       
-      </div>
-      <button type="button" class="btn btn-link" >Forgot Password</button><br>
-      <p id="signup">Don't have an account? <a href="#">Sign Up</a></p>
-    </div>
-  </div>
-</div>
-<div>
-   
-  </div> -->
+
    
 <ng-template #templatefirst>
   <div class="modal-header">
-  
-   
     <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
       <span aria-hidden="true">&times;</span>
     </button>
@@ -83,11 +49,10 @@
   </div>
   <div class="modal-body">
     <app-reset-password></app-reset-password>
-    
-
-     <div class="clearfix"></div>
   </div>
 </ng-template>
+
+
 </body>
 
   </html>

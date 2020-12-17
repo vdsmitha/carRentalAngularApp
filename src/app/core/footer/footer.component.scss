@@ -1,0 +1,19 @@
+.footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(34, 33, 33);
+    bottom: 0;
+    height:60px;
+    position: fixed;
+    width:100%;
+    padding:0px 20px;
+}
+#copyright{
+    color: lightgray;
+}
+.footer a{
+    color:white;
+    text-decoration: none;
+}

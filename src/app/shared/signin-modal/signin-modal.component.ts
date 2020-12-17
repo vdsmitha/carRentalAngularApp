@@ -15,11 +15,13 @@ modalRef:BsModalRef | null;
 modalRef2:BsModalRef;
 constructor(private modalService: BsModalService) {}
  
+ngOnInit(): void {
+}
 openFirstModal(template: TemplateRef<any>) {
   this.modalRef = this.modalService.show(template, { class: 'modal-lg' });
 }
 openModalSecond(template: TemplateRef<any>) {
-  this.modalRef2 = this.modalService.show(template, { class: 'second-lg' });
+  this.modalRef2 = this.modalService.show(template, { class: 'modal-lg' });
 }
 closeFirstModal() {
   if (!this.modalRef) {

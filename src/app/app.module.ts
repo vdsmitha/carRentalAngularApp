@@ -14,6 +14,10 @@ import { TabsModule } from 'ngx-bootstrap/tabs';
 import { SignupComponent } from './shared/signup/signup.component';
 import { ValidateEqualModule } from 'ng-validate-equal';
 import { ResetPasswordComponent } from './shared/reset-password/reset-password.component';
+import { BookVehicleComponent } from './booking/book-vehicle/book-vehicle.component';
+import { AddVehicleComponent } from './user/add-vehicle/add-vehicle.component';
+import { AdminDashboardComponent } from './user/admin-dashboard/admin-dashboard.component';
+
 
 @NgModule({
   declarations: [
@@ -24,17 +28,20 @@ import { ResetPasswordComponent } from './shared/reset-password/reset-password.c
     SigninModalComponent,
     SigninComponent,
     SignupComponent,
-    ResetPasswordComponent
+    ResetPasswordComponent,
+    BookVehicleComponent,
+    AddVehicleComponent,
+    AdminDashboardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
-    ValidateEqualModule,
     ReactiveFormsModule,
     ModalModule.forRoot(),
-    TabsModule.forRoot()
+    TabsModule.forRoot(),
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
