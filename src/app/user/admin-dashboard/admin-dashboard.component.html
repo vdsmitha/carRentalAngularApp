@@ -1,1 +1,44 @@
-<p>admin-dashboard works!</p>
+<br><h2 style="text-align: center;">Available Vehicles</h2><br>
+<div class="container">
+     <div class="row">
+        <i class="fa fa-plus-circle" aria-hidden="true" style="color: #007BFF;">
+            <button type="button" class="btn btn-link" style="float: right;" [routerLink]="['/addvehicle']">&nbsp; Add Vehicle</button>
+        </i>
+    </div>
+    <div class="col-sm-12">
+        <table class="table">
+            <thead>
+                <tr id="row1">
+                    <th scope="col">Image</th>
+                    <th scope="col">Model</th>
+                    <th scope="col">Number</th>
+                    <th scope="col">Sub Category</th>
+                    <th scope="col">Fuel Type</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let vehicle of vehicles">
+                    <th scope="row">{{ vehicle.carImageUrl }}</th>
+                    <td>{{ vehicle.vehicleModel }}</td>
+                    <td>{{ vehicle.vehicleNumber}}</td>
+                    <td>{{ vehicle.vehicleSubCategoryId }}</td>
+                    <td>{{ vehicle.fuelTypeId }}</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    </tr>
+                    <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

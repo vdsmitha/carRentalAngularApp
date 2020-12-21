@@ -6,7 +6,8 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
 
 const routes: Routes = [
     {path:'addvehicle',component:AddVehicleComponent},
-    {path:'admindash',component:AdminDashboardComponent}
+    {path:'admindash',component:AdminDashboardComponent},
+
     
     
    

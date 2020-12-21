@@ -6,8 +6,8 @@
     </head>
 
 <body>
-<button type="button" class="btn btn-primary" (click)="openFirstModal(templatefirst)">Render auto-shown modal</button>
 
+<button class="btn btn-link" id="sign" (click)="openFirstModal(templatefirst)">Sign In</button>
    
 <ng-template #templatefirst>
   <div class="modal-header">
@@ -18,8 +18,9 @@
   <div class="modal-body">
     <tabset>
       <tab id="tab1">
-          <ng-template tabHeading><i class="fa fa-sign-in"></i> &nbsp;Sign in</ng-template>
+          <ng-template tabHeading><div id="signintab"><i class="fa fa-sign-in"></i> &nbsp;Sign in</div></ng-template>
           <app-signin></app-signin>
+      
           <div class="row">
             <div class="col-md-3"></div>
             <div class="col-md-6" style="text-align: center;"><button type="button" class="btn btn-link" (click)="openModalSecond(templateSecond)">Forgot Password</button></div>
@@ -31,7 +32,7 @@
           
       </tab>
       <tab id="tab2">
-      <ng-template tabHeading><i class="fa fa-user-plus"></i> &nbsp;Sign up</ng-template>
+      <ng-template tabHeading><div id="signuptab"><i class="fa fa-user-plus"></i> &nbsp;Sign up</div></ng-template>
       <app-signup></app-signup>
   </tab>
     </tabset>

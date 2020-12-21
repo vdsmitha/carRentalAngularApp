@@ -17,6 +17,7 @@ import { ResetPasswordComponent } from './shared/reset-password/reset-password.c
 import { BookVehicleComponent } from './booking/book-vehicle/book-vehicle.component';
 import { AddVehicleComponent } from './user/add-vehicle/add-vehicle.component';
 import { AdminDashboardComponent } from './user/admin-dashboard/admin-dashboard.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -41,6 +42,7 @@ import { AdminDashboardComponent } from './user/admin-dashboard/admin-dashboard.
     ReactiveFormsModule,
     ModalModule.forRoot(),
     TabsModule.forRoot(),
+    HttpClientModule
     
   ],
   providers: [],

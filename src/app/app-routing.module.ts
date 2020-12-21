@@ -8,12 +8,15 @@ import { NavBarComponent } from './core/nav-bar/nav-bar.component';
 import { HomeComponent } from './home/home/home.component';
 import { SigninModalComponent } from './shared/signin-modal/signin-modal.component';
 import { SigninComponent } from './shared/signin/signin.component';
+import { AdminDashboardComponent } from './user/admin-dashboard/admin-dashboard.component';
 import { UserRoutingModule } from './user/user-routing.module';
 
 
 const routes: Routes = [
   {path:'signmodal',component:SigninModalComponent},
- {path:'home',component:HomeComponent}
+ {path:'',component:HomeComponent},
+ { path:'vehicle',component:AdminDashboardComponent},
+ 
   
  
   
