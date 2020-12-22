@@ -15,7 +15,7 @@ import { UserRoutingModule } from './user/user-routing.module';
 const routes: Routes = [
   {path:'signmodal',component:SigninModalComponent},
  {path:'',component:HomeComponent},
- { path:'vehicle',component:AdminDashboardComponent},
+
  
   
  

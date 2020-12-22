@@ -1,1 +1,70 @@
-<p>book-vehicle works!</p>
+<div class="container">
+    
+    <div id="stepper1" class="bs-stepper">
+      <div class="bs-stepper-header">
+        <div class="step" data-target="#test-l-1">
+          <button class="step-trigger">
+            <span class="bs-stepper-circle">1</span>
+            <span class="bs-stepper-label">Pick Up</span>
+          </button>
+        </div>
+        <div class="line"></div>
+        <div class="step" data-target="#test-l-2">
+          <button class="step-trigger">
+            <span class="bs-stepper-circle">2</span>
+            <span class="bs-stepper-label">Drop Off</span>
+          </button>
+        </div>
+        <div class="line"></div>
+        <div class="step" data-target="#test-l-3">
+          <button class="step-trigger">
+            <span class="bs-stepper-circle">3</span>
+            <span class="bs-stepper-label">Available Vehicles</span>
+          </button>
+        </div>
+        <div class="line"></div>
+        <div class="step" data-target="#test-l-4">
+          <button class="step-trigger">
+            <span class="bs-stepper-circle">4</span>
+            <span class="bs-stepper-label">Confirm Booking</span>
+          </button>
+        </div>
+
+      </div>
+      <div class="bs-stepper-content">
+        <form (ngSubmit)="onSubmit()">
+          <div id="test-l-1" class="content">
+            <div class="form-group">
+                <div class="col-md-4">
+              <label for="pickup">Select Pick Up Date</label>
+              <input type="text" class="form-control" id="pickup" placeholder="Select Pick Up Date" bsDatepicker/>
+            </div>
+            </div>
+            <div class="col-md-4">
+            <button (click)="next()" class="btn btn-primary">Next</button></div>
+          </div>
+          <div id="test-l-2" class="content">
+          
+            <div class="form-group row">
+              <div class="col-sm-4">
+              <input type="text" class="form-control" id="location" placeholder="Select Location" />
+            </div>
+            <div class="col-sm-4">
+              
+                <input type="text" class="form-control" id="dropoff" placeholder="Select Drop Off Date" bsDatepicker />
+              </div>
+              </div>
+              <button (click)="prev()" type="button" class="btn btn-default">Prev</button>
+            <button (click)="next()" class="btn btn-primary">Next</button>
+          </div>
+          <div id="test-l-3" class="content text-center">
+            <button type="submit" class="btn btn-primary mt-5">Submit</button>
+          </div>
+          <div id="test-l-4" class="content text-center">
+            <button type="submit" class="btn btn-primary mt-5">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  

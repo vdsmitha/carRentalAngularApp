@@ -11,7 +11,7 @@ export class AuthServiceService {
 user=new Subject<User>();
   constructor(private httpClient:HttpClient) { }
   signup(user:User){
-    let url='http://localhost:8012/hirewheels/v1/users';
+    let url='http://localhost:8080/hirewheels/v1/users';
     return this.httpClient.post(url,user);
   }
 
@@ -21,7 +21,7 @@ user=new Subject<User>();
   }
 
   login(credentials):Observable<User>{
-    let url='localhost:8012/hirewheels/v1/users/access-token';
+    let url='localhost:8080/hirewheels/v1/users/access-token';
     return this.httpClient.post<User>(url,credentials).pipe(catchError(this.errorHandler),
     tap((response:User)=>{
       this.saveUser(response);

@@ -18,6 +18,7 @@ import { BookVehicleComponent } from './booking/book-vehicle/book-vehicle.compon
 import { AddVehicleComponent } from './user/add-vehicle/add-vehicle.component';
 import { AdminDashboardComponent } from './user/admin-dashboard/admin-dashboard.component';
 import { HttpClientModule } from '@angular/common/http';
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 
 
 @NgModule({
@@ -42,7 +43,8 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     ModalModule.forRoot(),
     TabsModule.forRoot(),
-    HttpClientModule
+    HttpClientModule,
+    BsDatepickerModule.forRoot()
     
   ],
   providers: [],

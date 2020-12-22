@@ -1,9 +1,10 @@
 <br><h2 style="text-align: center;">Available Vehicles</h2><br>
 <div class="container">
-     <div class="row">
-        <i class="fa fa-plus-circle" aria-hidden="true" style="color: #007BFF;">
-            <button type="button" class="btn btn-link" style="float: right;" [routerLink]="['/addvehicle']">&nbsp; Add Vehicle</button>
-        </i>
+     <div class="col-sm-12">
+        
+            <button type="button" class="btn btn-link" id="vehicle" [routerLink]="['/addvehicle']">
+                <i class="fa fa-plus-circle" aria-hidden="true" style="color: #007BFF;"></i> Add Vehicle</button>
+        
     </div>
     <div class="col-sm-12">
         <table class="table">
@@ -24,20 +25,7 @@
                     <td>{{ vehicle.vehicleSubCategoryId }}</td>
                     <td>{{ vehicle.fuelTypeId }}</td>
                 </tr>
-                <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    </tr>
-                    <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    </tr>
+               
             </tbody>
         </table>
     </div>
